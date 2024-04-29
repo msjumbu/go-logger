@@ -23,21 +23,6 @@ const (
 
 var LogLevelString = "INFO"
 
-func setLogLevel(level string) {
-	switch strings.ToUpper(level) {
-	case "DEBUG":
-		LogLevelString = "DEBUG"
-	case "INFO":
-		LogLevelString = "INFO"
-	case "WARN":
-		LogLevelString = "WARN"
-	case "ERROR":
-		LogLevelString = "ERROR"
-	case "FATAL":
-		LogLevelString = "FATAL"
-	}
-}
-
 func logMessage(logger *log.Logger, lvl LogLevel, format string, args ...interface{}) {
 	if !shouldLog(lvl) {
 		return
