@@ -1,6 +1,6 @@
 // can you find the errors in this?
 
-package log
+package gologger
 
 import (
 	"fmt"
